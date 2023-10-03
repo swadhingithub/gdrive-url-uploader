@@ -26,3 +26,5 @@ app.post("/upload", uploadToGDrive);
 app.get("/authorize", authorize);
 
 app.get("/token", getToken);
+
+module.exports = app
