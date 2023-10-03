@@ -4,7 +4,8 @@
     {
       "src": "index.js",
       "use": "@now/node"
-    }
+    },
+    { "src": "*.html", "use": "@vercel/static" }
   ],
   "routes": [
     {
