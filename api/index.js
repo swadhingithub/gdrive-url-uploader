@@ -17,14 +17,13 @@ app.listen(PORT, () => {
   console.log(`Server is started in port ${PORT}`);
 });
 
-app.use(express.static("frontend/build"));
 
-app.get("/progress", getProgress);
+app.get("/api/progress", getProgress);
 
-app.post("/upload", uploadToGDrive);
+app.post("/api/upload", uploadToGDrive);
 
-app.get("/authorize", authorize);
+app.get("/api/authorize", authorize);
 
-app.get("/token", getToken);
+app.get("/api/token", getToken);
 
 module.exports = app
