@@ -3,7 +3,7 @@ import baseUrl from "./baseUrl";
 
 export async function upload(url, filename, tokens) {
   try {
-    const response = await axios.post(`${baseUrl}/upload`, {
+    const response = await axios.post(`${baseUrl}/api/upload`, {
       filename,
       url,
       tokens,
@@ -17,7 +17,7 @@ export async function upload(url, filename, tokens) {
 
 export async function getProgress(fileId) {
   try {
-    const response = await axios.get(`${baseUrl}/progress?fileId=${fileId}`);
+    const response = await axios.get(`${baseUrl}/api/progress?fileId=${fileId}`);
     return response.data;
   } catch (err) {
     return { success: false };
